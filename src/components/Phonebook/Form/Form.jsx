@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import Input from '../Input/Input';
 import Label from '../Label/Label';
 import css from './Form.module.css';
@@ -62,5 +63,12 @@ class Form extends Component {
     );
   }
 }
-
+Input.propTypes = {
+  onChange: PropTypes.func.isRequired,
+  value: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  type: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  pattern: PropTypes.string.isRequired,
+};
 export default Form;
